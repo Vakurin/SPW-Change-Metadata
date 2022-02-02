@@ -39,7 +39,7 @@ def find_mint_ids_by_name(data, names_to_kill):
 
 
 def kill_mint_ids(data, mint_ids_to_kill):
-    alive_ids = read_json("data/alive_mint_ids.json")
+    dead_ids = read_json("data/dead_mint_ids.json")
     for el in data:
         mint = el['mint']
         if mint in mint_ids_to_kill:
@@ -48,9 +48,19 @@ def kill_mint_ids(data, mint_ids_to_kill):
                     att['value'] = "False"
                 el['metadata']['image'] = DEAD_IMG_URL
                 write_file(data=el['metadata'], name='change_meta/' + mint)
-        else:
-            if mint not in alive_ids:
-                alive_ids.append(mint)
+                if mint not in dead_ids:
+                    dead_ids.append(mint)
+    write_file(dead_ids, 'data/dead_mint_ids')
+    subtract_deads_from_alive()
+
+
+def subtract_deads_from_alive():
+    all_ids = read_json("data/spw_mint_ids.json")
+    dead_ids = read_json("data/dead_mint_ids.json")
+    alive_ids = []
+    for el in all_ids:
+        if el not in dead_ids:
+            alive_ids.append(el)
     write_file(alive_ids, 'data/alive_mint_ids')
 
 
@@ -62,7 +72,6 @@ def kill_mint_ids(data, mint_ids_to_kill):
 # metadata = read_json("data/spw_metadata.json")
 # ids = find_mint_ids_by_att(metadata, "Mustache", "Mechanical Mustache")
 # kill_mint_ids(metadata, ids)
-
 
 # # kill from names
 metadata = read_json("data/spw_metadata.json")
