@@ -19,10 +19,10 @@ def create_folder(name):
 
 
 def remove_dead_ids(data):
-    dead_id = find_mint_ids_to_kill(data, "isAlive", "False", kill=False)
+    dead_id = find_mint_ids_to_kill(data, "isAlive", "False")
 
 
-def find_mint_ids_to_kill(data, att_name, att_value, kill=False):
+def find_mint_ids_to_kill(data, att_name, att_value):
     count = 0
     mint_ids = []
     # for every element in json file
@@ -54,6 +54,5 @@ def write_file(data, mint_id):
 
 
 metadata = read_json("data/spw_metadata.json")
-ids = find_mint_ids_to_kill(metadata, "Mustache", "Mechanical Mustache", kill=True)
+ids = find_mint_ids_to_kill(metadata, "Mustache", "Mechanical Mustache")
 kill_mint_ids(metadata, ids)
-# print(read_json("data/ssj_metadata.json"))
