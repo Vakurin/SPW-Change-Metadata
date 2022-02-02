@@ -15,13 +15,26 @@ def find_mint_ids_by_att(data, att_name, att_value):
     mint_ids = []
     # for every element in json file
     for el in data:
+        mint = el['mint']
         # for attributes for search
         for att in el['metadata']['attributes']:
-            mint = el['mint']
             if (att['trait_type'] == att_name) and (att['value'] == att_value):
                 count += 1
                 mint_ids.append(mint)
     print(f"Find {count} Attributes {att_name} value {att_value}")
+    return mint_ids
+
+
+def find_mint_ids_by_name(data, names_to_kill):
+    count = 0
+    mint_ids = []
+    for el in data:
+        mint = el['mint']
+        name = el['metadata']['name']
+        if int(name.split('#', 1)[1]) in names_to_kill:
+            count += 1
+            mint_ids.append(mint)
+    print(f"Find {count} Names")
     return mint_ids
 
 
@@ -41,8 +54,18 @@ def kill_mint_ids(data, mint_ids_to_kill):
     write_file(alive_ids, 'data/alive_mint_ids')
 
 
-metadata = read_json("data/spw_metadata.json")
+# # get alive mint ids from metadata
+# metadata = read_json("data/spw_metadata.json")
 # find_alive_mint_ids(metadata)
 
-ids = find_mint_ids_by_att(metadata, "Mustache", "Mechanical Mustache")
+# # kill from traits
+# metadata = read_json("data/spw_metadata.json")
+# ids = find_mint_ids_by_att(metadata, "Mustache", "Mechanical Mustache")
+# kill_mint_ids(metadata, ids)
+
+
+# # kill from names
+metadata = read_json("data/spw_metadata.json")
+names = read_json("data/names_to_kill.json")
+ids = find_mint_ids_by_name(metadata, names)
 kill_mint_ids(metadata, ids)

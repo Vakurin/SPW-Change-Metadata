@@ -1,6 +1,192 @@
 [
 	{
 		"tokenData": {
+			"name": "SPW #3",
+			"symbol": "SPW",
+			"uri": "https://arweave.net/169-Ea-guw51QkBHO6-CsntuABqxylFDgni6GXZ1D0E",
+			"sellerFeeBasisPoints": 1000,
+			"creators": [
+				{
+					"share": 0,
+					"address": "8TTFEYyHP2HR7WyPFCbhQmXtxfhGdQHhxW9VX2JjZmJT",
+					"verified": true
+				},
+				{
+					"share": 50,
+					"address": "HCSiCPy2qBaRXXAUEygDWYx8VqMiiWEUGhbkC36uJSDa",
+					"verified": false
+				},
+				{
+					"share": 50,
+					"address": "HfvchurEYDrodtmVUEVhP2mxwAX95J7tTHVF8o6cWLbt",
+					"verified": false
+				}
+			]
+		},
+		"metadata": {
+			"name": "SPW #3",
+			"symbol": "SPW",
+			"description": "Every day you will need to complete tasks so that your NFT survives the war",
+			"seller_fee_basis_points": 1000,
+			"image": "https://arweave.net/RHLYg5wZwpCX3ZwwZYAJTriJo1ZkLB2ruGHbfy6GfJc",
+			"attributes": [
+				{
+					"trait_type": "isAlive",
+					"value": "False"
+				},
+				{
+					"trait_type": "Type",
+					"value": "Dog"
+				},
+				{
+					"trait_type": "Glasses",
+					"value": "Gery Sight"
+				},
+				{
+					"trait_type": "Mustache",
+					"value": "Mechanical Mustache"
+				},
+				{
+					"trait_type": "Nose",
+					"value": "Orange"
+				},
+				{
+					"trait_type": "Eyes",
+					"value": "Black"
+				},
+				{
+					"trait_type": "Mouths",
+					"value": "Pink"
+				},
+				{
+					"trait_type": "Face",
+					"value": "Brown"
+				},
+				{
+					"trait_type": "Background",
+					"value": "Peachy"
+				}
+			],
+			"properties": {
+				"creators": [
+					{
+						"address": "HCSiCPy2qBaRXXAUEygDWYx8VqMiiWEUGhbkC36uJSDa",
+						"share": 50
+					},
+					{
+						"address": "HfvchurEYDrodtmVUEVhP2mxwAX95J7tTHVF8o6cWLbt",
+						"share": 50
+					}
+				],
+				"files": [
+					{
+						"uri": "https://www.arweave.net/SRkLxS5cDRu2b5xfXBd_HoGf3Qn1q8gKFhMOgxdI0mQ?ext=png",
+						"type": "image/png"
+					}
+				]
+			},
+			"collection": {
+				"name": "Sol Pet War",
+				"family": "Solana Journey"
+			}
+		},
+		"mint": "7dnnu9z2QQuPezBv8pTwkzUqthWnxiYkr7bVoZpQjRux"
+	},
+	{
+		"tokenData": {
+			"name": "SPW #2",
+			"symbol": "SPW",
+			"uri": "https://arweave.net/FXp5mgFw56G6OVShpQq2A3WrGDy83kLGTW9BMl0Zd40",
+			"sellerFeeBasisPoints": 1000,
+			"creators": [
+				{
+					"share": 0,
+					"address": "8TTFEYyHP2HR7WyPFCbhQmXtxfhGdQHhxW9VX2JjZmJT",
+					"verified": true
+				},
+				{
+					"share": 50,
+					"address": "HCSiCPy2qBaRXXAUEygDWYx8VqMiiWEUGhbkC36uJSDa",
+					"verified": false
+				},
+				{
+					"share": 50,
+					"address": "HfvchurEYDrodtmVUEVhP2mxwAX95J7tTHVF8o6cWLbt",
+					"verified": false
+				}
+			]
+		},
+		"metadata": {
+			"name": "SPW #2",
+			"symbol": "SPW",
+			"description": "Every day you will need to complete tasks so that your NFT survives the war",
+			"seller_fee_basis_points": 1000,
+			"image": "https://arweave.net/RHLYg5wZwpCX3ZwwZYAJTriJo1ZkLB2ruGHbfy6GfJc",
+			"attributes": [
+				{
+					"trait_type": "isAlive",
+					"value": "False"
+				},
+				{
+					"trait_type": "Type",
+					"value": "Dog"
+				},
+				{
+					"trait_type": "Glasses",
+					"value": "Pink Retro"
+				},
+				{
+					"trait_type": "Mustache",
+					"value": "Sand Screws"
+				},
+				{
+					"trait_type": "Nose",
+					"value": "Pink Pierced"
+				},
+				{
+					"trait_type": "Eyes",
+					"value": "Dope"
+				},
+				{
+					"trait_type": "Mouths",
+					"value": "Gray"
+				},
+				{
+					"trait_type": "Face",
+					"value": "Orange"
+				},
+				{
+					"trait_type": "Background",
+					"value": "Beige"
+				}
+			],
+			"properties": {
+				"creators": [
+					{
+						"address": "HCSiCPy2qBaRXXAUEygDWYx8VqMiiWEUGhbkC36uJSDa",
+						"share": 50
+					},
+					{
+						"address": "HfvchurEYDrodtmVUEVhP2mxwAX95J7tTHVF8o6cWLbt",
+						"share": 50
+					}
+				],
+				"files": [
+					{
+						"uri": "https://www.arweave.net/VHpcSZ_DD1_GY-JY55B1qz6yKAKFnkKYOQ9IPTkx60E?ext=png",
+						"type": "image/png"
+					}
+				]
+			},
+			"collection": {
+				"name": "Sol Pet War",
+				"family": "Solana Journey"
+			}
+		},
+		"mint": "FqhM8RcojoUb5UQb1d4UQSwHaFzTXpiLbAivAyXzKR6P"
+	},
+	{
+		"tokenData": {
 			"name": "SPW #1",
 			"symbol": "SPW",
 			"uri": "https://arweave.net/ISJbjD2Lf65dADpltsIT6LB9b61bFpG5thuLQLADbLk",
@@ -91,191 +277,5 @@
 			}
 		},
 		"mint": "A4aBw8anLf1b9YL2hFekqxqqdj89doFqinsxVskXS6Fp"
-	},
-	{
-		"tokenData": {
-			"name": "SPW #2",
-			"symbol": "SPW",
-			"uri": "https://arweave.net/_bqiT5y1ClEBSG-EiTnWPEsMvi2UV5EIVmEFTPvP8aI",
-			"sellerFeeBasisPoints": 1000,
-			"creators": [
-				{
-					"share": 0,
-					"address": "8TTFEYyHP2HR7WyPFCbhQmXtxfhGdQHhxW9VX2JjZmJT",
-					"verified": true
-				},
-				{
-					"share": 50,
-					"address": "HCSiCPy2qBaRXXAUEygDWYx8VqMiiWEUGhbkC36uJSDa",
-					"verified": false
-				},
-				{
-					"share": 50,
-					"address": "HfvchurEYDrodtmVUEVhP2mxwAX95J7tTHVF8o6cWLbt",
-					"verified": false
-				}
-			]
-		},
-		"metadata": {
-			"name": "SPW #2",
-			"symbol": "SPW",
-			"description": "Every day you will need to complete tasks so that your NFT survives the war",
-			"seller_fee_basis_points": 1000,
-			"image": "https://www.arweave.net/VHpcSZ_DD1_GY-JY55B1qz6yKAKFnkKYOQ9IPTkx60E?ext=png",
-			"attributes": [
-				{
-					"trait_type": "isAlive",
-					"value": "True"
-				},
-				{
-					"trait_type": "Type",
-					"value": "Dog"
-				},
-				{
-					"trait_type": "Glasses",
-					"value": "Pink Retro"
-				},
-				{
-					"trait_type": "Mustache",
-					"value": "Sand Screws"
-				},
-				{
-					"trait_type": "Nose",
-					"value": "Pink Pierced"
-				},
-				{
-					"trait_type": "Eyes",
-					"value": "Dope"
-				},
-				{
-					"trait_type": "Mouths",
-					"value": "Gray"
-				},
-				{
-					"trait_type": "Face",
-					"value": "Orange"
-				},
-				{
-					"trait_type": "Background",
-					"value": "Beige"
-				}
-			],
-			"properties": {
-				"creators": [
-					{
-						"address": "HCSiCPy2qBaRXXAUEygDWYx8VqMiiWEUGhbkC36uJSDa",
-						"share": 50
-					},
-					{
-						"address": "HfvchurEYDrodtmVUEVhP2mxwAX95J7tTHVF8o6cWLbt",
-						"share": 50
-					}
-				],
-				"files": [
-					{
-						"uri": "https://www.arweave.net/VHpcSZ_DD1_GY-JY55B1qz6yKAKFnkKYOQ9IPTkx60E?ext=png",
-						"type": "image/png"
-					}
-				]
-			},
-			"collection": {
-				"name": "Sol Pet War",
-				"family": "Solana Journey"
-			}
-		},
-		"mint": "FqhM8RcojoUb5UQb1d4UQSwHaFzTXpiLbAivAyXzKR6P"
-	},
-	{
-		"tokenData": {
-			"name": "SPW #3",
-			"symbol": "SPW",
-			"uri": "https://arweave.net/BQzLAjNMwh1E6IBT-WbpuSgMUapG3b1Z5Hu80knysas",
-			"sellerFeeBasisPoints": 1000,
-			"creators": [
-				{
-					"share": 0,
-					"address": "8TTFEYyHP2HR7WyPFCbhQmXtxfhGdQHhxW9VX2JjZmJT",
-					"verified": true
-				},
-				{
-					"share": 50,
-					"address": "HCSiCPy2qBaRXXAUEygDWYx8VqMiiWEUGhbkC36uJSDa",
-					"verified": false
-				},
-				{
-					"share": 50,
-					"address": "HfvchurEYDrodtmVUEVhP2mxwAX95J7tTHVF8o6cWLbt",
-					"verified": false
-				}
-			]
-		},
-		"metadata": {
-			"name": "SPW #3",
-			"symbol": "SPW",
-			"description": "Every day you will need to complete tasks so that your NFT survives the war",
-			"seller_fee_basis_points": 1000,
-			"image": "https://www.arweave.net/SRkLxS5cDRu2b5xfXBd_HoGf3Qn1q8gKFhMOgxdI0mQ?ext=png",
-			"attributes": [
-				{
-					"trait_type": "isAlive",
-					"value": "True"
-				},
-				{
-					"trait_type": "Type",
-					"value": "Dog"
-				},
-				{
-					"trait_type": "Glasses",
-					"value": "Gery Sight"
-				},
-				{
-					"trait_type": "Mustache",
-					"value": "Mechanical Mustache"
-				},
-				{
-					"trait_type": "Nose",
-					"value": "Orange"
-				},
-				{
-					"trait_type": "Eyes",
-					"value": "Black"
-				},
-				{
-					"trait_type": "Mouths",
-					"value": "Pink"
-				},
-				{
-					"trait_type": "Face",
-					"value": "Brown"
-				},
-				{
-					"trait_type": "Background",
-					"value": "Peachy"
-				}
-			],
-			"properties": {
-				"creators": [
-					{
-						"address": "HCSiCPy2qBaRXXAUEygDWYx8VqMiiWEUGhbkC36uJSDa",
-						"share": 50
-					},
-					{
-						"address": "HfvchurEYDrodtmVUEVhP2mxwAX95J7tTHVF8o6cWLbt",
-						"share": 50
-					}
-				],
-				"files": [
-					{
-						"uri": "https://www.arweave.net/SRkLxS5cDRu2b5xfXBd_HoGf3Qn1q8gKFhMOgxdI0mQ?ext=png",
-						"type": "image/png"
-					}
-				]
-			},
-			"collection": {
-				"name": "Sol Pet War",
-				"family": "Solana Journey"
-			}
-		},
-		"mint": "7dnnu9z2QQuPezBv8pTwkzUqthWnxiYkr7bVoZpQjRux"
 	}
 ]

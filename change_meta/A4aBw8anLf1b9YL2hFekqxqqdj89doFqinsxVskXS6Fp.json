@@ -1,5 +1,5 @@
 {
-    "name": "SPW #3",
+    "name": "SPW #1",
     "symbol": "SPW",
     "description": "Every day you will need to complete tasks so that your NFT survives the war",
     "seller_fee_basis_points": 1000,
@@ -15,23 +15,23 @@
         },
         {
             "trait_type": "Glasses",
-            "value": "Gery Sight"
+            "value": "Pink Retro"
         },
         {
             "trait_type": "Mustache",
-            "value": "Mechanical Mustache"
+            "value": "Sand Screws"
         },
         {
             "trait_type": "Nose",
-            "value": "Orange"
+            "value": "Crimson Homs"
         },
         {
             "trait_type": "Eyes",
-            "value": "Black"
+            "value": "Open"
         },
         {
             "trait_type": "Mouths",
-            "value": "Pink"
+            "value": "Smoker"
         },
         {
             "trait_type": "Face",
@@ -39,7 +39,7 @@
         },
         {
             "trait_type": "Background",
-            "value": "Peachy"
+            "value": "Beige"
         }
     ],
     "properties": {
@@ -55,7 +55,7 @@
         ],
         "files": [
             {
-                "uri": "https://www.arweave.net/SRkLxS5cDRu2b5xfXBd_HoGf3Qn1q8gKFhMOgxdI0mQ?ext=png",
+                "uri": "https://www.arweave.net/Q-5yHAI1_-atwBvIvxxKsqAhLjA0wGgxBP8dObL1mHg?ext=png",
                 "type": "image/png"
             }
         ]

@@ -1,0 +1,67 @@
+{
+    "name": "SPW #2",
+    "symbol": "SPW",
+    "description": "Every day you will need to complete tasks so that your NFT survives the war",
+    "seller_fee_basis_points": 1000,
+    "image": "https://arweave.net/RHLYg5wZwpCX3ZwwZYAJTriJo1ZkLB2ruGHbfy6GfJc",
+    "attributes": [
+        {
+            "trait_type": "isAlive",
+            "value": "False"
+        },
+        {
+            "trait_type": "Type",
+            "value": "Dog"
+        },
+        {
+            "trait_type": "Glasses",
+            "value": "Pink Retro"
+        },
+        {
+            "trait_type": "Mustache",
+            "value": "Sand Screws"
+        },
+        {
+            "trait_type": "Nose",
+            "value": "Pink Pierced"
+        },
+        {
+            "trait_type": "Eyes",
+            "value": "Dope"
+        },
+        {
+            "trait_type": "Mouths",
+            "value": "Gray"
+        },
+        {
+            "trait_type": "Face",
+            "value": "Orange"
+        },
+        {
+            "trait_type": "Background",
+            "value": "Beige"
+        }
+    ],
+    "properties": {
+        "creators": [
+            {
+                "address": "HCSiCPy2qBaRXXAUEygDWYx8VqMiiWEUGhbkC36uJSDa",
+                "share": 50
+            },
+            {
+                "address": "HfvchurEYDrodtmVUEVhP2mxwAX95J7tTHVF8o6cWLbt",
+                "share": 50
+            }
+        ],
+        "files": [
+            {
+                "uri": "https://www.arweave.net/VHpcSZ_DD1_GY-JY55B1qz6yKAKFnkKYOQ9IPTkx60E?ext=png",
+                "type": "image/png"
+            }
+        ]
+    },
+    "collection": {
+        "name": "Sol Pet War",
+        "family": "Solana Journey"
+    }
+}
