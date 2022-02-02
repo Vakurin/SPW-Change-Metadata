@@ -1,5 +1,5 @@
 from utility import read_json
-import json
+from utility import write_file
 
 
 def metaboss_json(file):
@@ -14,9 +14,4 @@ def metaboss_json(file):
     write_file(data, "update-metaboss")
 
 
-def write_file(data, name):
-    with open(f'./{name}.json', 'w', encoding='utf-8') as f:
-        json.dump(data, f, ensure_ascii=False, indent=4)
-
-
-metaboss_json("./data/change-it.json")
+metaboss_json("data/metaboss-change-it.json")
