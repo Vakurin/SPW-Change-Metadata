@@ -1,20 +1,16 @@
-import json
-import os
 from utility import read_json
+from utility import write_file
 
 DEAD_IMG_URL = "https://arweave.net/RHLYg5wZwpCX3ZwwZYAJTriJo1ZkLB2ruGHbfy6GfJc"
 
 
-def create_folder(name):
-    os.mkdir("./" + name)
-    return "./" + name
+# extra function to find from *_metadata.json
+def find_alive_mint_ids(data):
+    alive_mint_ids = find_mint_ids_by_att(data, "isAlive", "True")
+    write_file(data=alive_mint_ids, name='data/alive_mint_ids_by_metadata')
 
 
-def remove_dead_ids(data):
-    dead_id = find_mint_ids_to_kill(data, "isAlive", "False")
-
-
-def find_mint_ids_to_kill(data, att_name, att_value):
+def find_mint_ids_by_att(data, att_name, att_value):
     count = 0
     mint_ids = []
     # for every element in json file
@@ -29,22 +25,24 @@ def find_mint_ids_to_kill(data, att_name, att_value):
     return mint_ids
 
 
-def kill_mint_ids(data, mint_ids):
+def kill_mint_ids(data, mint_ids_to_kill):
+    alive_ids = read_json("data/alive_mint_ids.json")
     for el in data:
         mint = el['mint']
-        if mint in mint_ids:
+        if mint in mint_ids_to_kill:
             for att in el['metadata']['attributes']:
                 if att["trait_type"] == "isAlive":
                     att['value'] = "False"
                 el['metadata']['image'] = DEAD_IMG_URL
-                write_file(data=el['metadata'], mint_id=mint)
-
-
-def write_file(data, mint_id):
-    with open(f'./change_meta/{mint_id}.json', 'w', encoding='utf-8') as f:
-        json.dump(data, f, ensure_ascii=False, indent=4)
+                write_file(data=el['metadata'], name='change_meta/' + mint)
+        else:
+            if mint not in alive_ids:
+                alive_ids.append(mint)
+    write_file(alive_ids, 'data/alive_mint_ids')
 
 
 metadata = read_json("data/spw_metadata.json")
-ids = find_mint_ids_to_kill(metadata, "Mustache", "Mechanical Mustache")
+# find_alive_mint_ids(metadata)
+
+ids = find_mint_ids_by_att(metadata, "Mustache", "Mechanical Mustache")
 kill_mint_ids(metadata, ids)
