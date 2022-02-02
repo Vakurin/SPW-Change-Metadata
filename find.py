@@ -1,16 +1,8 @@
 import json
 import os
+from utility import read_json
 
 DEAD_IMG_URL = "https://arweave.net/RHLYg5wZwpCX3ZwwZYAJTriJo1ZkLB2ruGHbfy6GfJc"
-
-
-def read_json(filename):
-    f = open(filename)
-    return json.load(f)
-
-
-# def files(folder):
-#     return os.listdir(folder)
 
 
 def create_folder(name):
