@@ -4,6 +4,11 @@ from utility import write_file
 DEAD_IMG_URL = "https://arweave.net/RHLYg5wZwpCX3ZwwZYAJTriJo1ZkLB2ruGHbfy6GfJc"
 
 
+def find_alive_mint_ids(mint_ids: list):
+    alive_ids: list = read_json('data/alive_mint_ids.json')
+    return list(filter(lambda mint: mint in alive_ids, mint_ids))
+
+
 def find_mint_ids_by_att(data, att_name, att_value):
     count = 0
     mint_ids = []
@@ -16,19 +21,6 @@ def find_mint_ids_by_att(data, att_name, att_value):
                 count += 1
                 mint_ids.append(mint)
     print(f"Find {count} Attributes {att_name} value {att_value}")
-    return mint_ids
-
-
-def find_mint_ids_by_name(data, names_to_kill):
-    count = 0
-    mint_ids = []
-    for el in data:
-        mint = el['mint']
-        name = el['metadata']['name']
-        if int(name.split('#', 1)[1]) in names_to_kill:
-            count += 1
-            mint_ids.append(mint)
-    print(f"Find {count} Names")
     return mint_ids
 
 
@@ -55,3 +47,13 @@ def subtract_deads_from_alive(all_ids: list):
         if el not in dead_ids:
             alive_ids.append(el)
     write_file(alive_ids, 'data/alive_mint_ids')
+
+
+def get_mint_att_dict(data: list, att_name):
+    mint_att_dict = dict()
+    for el in data:
+        mint = el['mint']
+        for att in el['metadata']['attributes']:
+            if att['trait_type'] == att_name:
+                mint_att_dict[mint] = att
+    return mint_att_dict
