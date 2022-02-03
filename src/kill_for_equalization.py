@@ -41,7 +41,6 @@ def get_mints_after_total_equalization(data: list, trait_type: str):
 
 # # Task 7, 14, 21, 28, 24
 metadata = read_json("data/ssj_metadata.json")
-holders = read_json('data/ssj_holders.json')
 all_ids = read_json("data/ssj_mint_ids.json")
 t_type = 'Background'
 t_value_1 = 'Purple'

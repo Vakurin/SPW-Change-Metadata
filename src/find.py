@@ -58,3 +58,13 @@ def get_mint_att_dict(data: list, trait_type):
             if att['trait_type'] == trait_type:
                 mint_att_dict[mint] = att
     return mint_att_dict
+
+
+def get_holders_with_alive_mints(mints_number: int, holders: dict):
+    holders_mints = dict()
+    for value, key in holders.items():
+        alive_mints = find_alive_mint_ids(key['mints'])
+        if len(alive_mints) >= mints_number:
+            holders_mints[value] = alive_mints
+    # write_file(holders_mints, 'test')
+    return holders_mints
