@@ -15,6 +15,7 @@ def get_mints_after_equation(data: list, trait_type: str, trait_value_1: str, tr
     return random.sample(max_mints, extra_mints_number)
 
 
+# task 7, 14, 21, 28, 24(need update code)
 metadata = read_json("data/ssj_metadata.json")
 holders = read_json('data/ssj_holders.json')
 all_ids = read_json("data/ssj_mint_ids.json")

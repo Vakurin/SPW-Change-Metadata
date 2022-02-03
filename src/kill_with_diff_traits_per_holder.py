@@ -1,4 +1,4 @@
-from utility import read_json, write_file
+from utility import read_json
 from find import kill_mint_ids, get_mint_att_dict, find_alive_mint_ids
 import random
 
@@ -25,13 +25,14 @@ def get_extra_mints_from_holders(holders: dict, mints_number: int, mint_att: dic
     return result_mints
 
 
+# task 4, 12?
 metadata = read_json("data/ssj_metadata.json")
-holders = read_json('data/ssj_holders.json')
+holders_with_all_mints = read_json('data/ssj_holders.json')
 all_ids = read_json("data/ssj_mint_ids.json")
 t_type = 'Background'
 mints_per_holder = 1
 
-holder_with_alive_mints = get_holders_with_alive_mints(mints_per_holder, holders)
+holder_with_alive_mints = get_holders_with_alive_mints(mints_per_holder, holders_with_all_mints)
 print(f"found {len(holder_with_alive_mints)} holders with >={mints_per_holder} alive mints")
 
 mint_att_dict = get_mint_att_dict(metadata, t_type)
