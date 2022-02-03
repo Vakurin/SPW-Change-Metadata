@@ -21,6 +21,8 @@ all_ids = read_json("data/ssj_mint_ids.json")
 
 ids_with_names = find_mint_ids_by_name(metadata, names)
 print(f"found:{ids_with_names}")
+
 ids_to_kill = find_alive_mint_ids(ids_with_names)
 print(f"kill:{ids_to_kill}")
+
 kill_mint_ids(metadata, ids_to_kill, all_ids)
