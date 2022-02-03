@@ -1,16 +1,7 @@
-from utility import read_json
-from find import kill_mint_ids, get_mint_att_dict, find_alive_mint_ids
 import random
 
-
-def get_holders_with_alive_mints(mints_number: int, holders: dict):
-    holders_mints = dict()
-    for value, key in holders.items():
-        alive_mints = find_alive_mint_ids(key['mints'])
-        if len(alive_mints) > mints_number:
-            holders_mints[value] = alive_mints
-    # write_file(holders_mints, 'test')
-    return holders_mints
+from find import kill_mint_ids, get_mint_att_dict, get_holders_with_alive_mints
+from utility import read_json
 
 
 # get mints if holder has mints with different trait values
