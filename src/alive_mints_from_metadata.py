@@ -8,5 +8,5 @@ def find_alive_mint_ids(data):
 
 
 # # get correct information from metadata
-metadata = read_json("data/spw_metadata.json")
+metadata = read_json("spw_metadata.json")
 find_alive_mint_ids(metadata)

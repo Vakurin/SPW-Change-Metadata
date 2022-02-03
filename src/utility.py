@@ -2,7 +2,7 @@ import json
 
 
 def read_json(filename):
-    f = open('../' + filename)
+    f = open('../data/' + filename)
     return json.load(f)
 
 

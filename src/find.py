@@ -5,7 +5,7 @@ DEAD_IMG_URL = "https://arweave.net/RHLYg5wZwpCX3ZwwZYAJTriJo1ZkLB2ruGHbfy6GfJc"
 
 
 def find_alive_mint_ids(mint_ids: list):
-    alive_ids: list = read_json('data/alive_mint_ids.json')
+    alive_ids: list = read_json('alive_mint_ids.json')
     return list(filter(lambda mint: mint in alive_ids, mint_ids))
     # return mint_ids
 
@@ -26,7 +26,7 @@ def find_mint_ids_by_att(data: list, trait_type: str, trait_value: str):
 
 
 def kill_mint_ids(data: list, mint_ids_to_kill: list, all_ids: list):
-    dead_ids = read_json("data/dead_mint_ids.json")
+    dead_ids = read_json("dead_mint_ids.json")
     for el in data:
         mint = el['mint']
         if mint in mint_ids_to_kill:
@@ -42,7 +42,7 @@ def kill_mint_ids(data: list, mint_ids_to_kill: list, all_ids: list):
 
 
 def subtract_deads_from_alive(all_ids: list):
-    dead_ids: list = read_json("data/dead_mint_ids.json")
+    dead_ids: list = read_json("dead_mint_ids.json")
     alive_ids = []
     for el in all_ids:
         if el not in dead_ids:

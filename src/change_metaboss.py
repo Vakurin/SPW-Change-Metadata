@@ -15,4 +15,4 @@ def metaboss_json(file):
 
 
 # # format to correct struct
-metaboss_json("data/metaboss-change-it.json")
+metaboss_json("arweave_output.json")

@@ -17,9 +17,9 @@ def get_extra_mints_from_holders(holders: dict, mints_number: int, mint_att: dic
 
 
 # # Task 4, 12?
-metadata = read_json("data/ssj_metadata.json")
-holders_with_all_mints = read_json('data/ssj_holders.json')
-all_ids = read_json("data/ssj_mint_ids.json")
+metadata = read_json("ssj_metadata.json")
+holders_with_all_mints = read_json('ssj_holders.json')
+all_ids = read_json("ssj_mint_ids.json")
 t_type = 'Background'
 mints_per_holder = 1
 

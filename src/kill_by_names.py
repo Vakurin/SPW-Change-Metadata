@@ -16,9 +16,9 @@ def find_mint_ids_by_name(data, names_to_kill):
 
 
 # # Task 13
-metadata = read_json("data/spw_metadata.json")
-names = read_json("data/names_to_kill.json")
-all_ids = read_json("data/ssj_mint_ids.json")
+metadata = read_json("spw_metadata.json")
+names = read_json("names_to_kill.json")
+all_ids = read_json("ssj_mint_ids.json")
 
 ids_with_names = find_mint_ids_by_name(metadata, names)
 print(f"found:{ids_with_names}")
