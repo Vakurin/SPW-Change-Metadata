@@ -14,4 +14,5 @@ def metaboss_json(file):
     write_file(data, "update-metaboss")
 
 
+# # format to correct struct
 metaboss_json("data/metaboss-change-it.json")

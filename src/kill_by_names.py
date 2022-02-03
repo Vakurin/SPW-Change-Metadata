@@ -15,7 +15,7 @@ def find_mint_ids_by_name(data, names_to_kill):
     return mint_ids
 
 
-# task 13
+# # Task 13
 metadata = read_json("data/spw_metadata.json")
 names = read_json("data/names_to_kill.json")
 all_ids = read_json("data/ssj_mint_ids.json")
