@@ -1,7 +1,13 @@
 import random
+from enum import Enum, auto
 from collections import defaultdict
 from find import find_mint_ids_by_att, find_alive_mint_ids, kill_mint_ids
 from utility import read_json
+
+
+class EqualityOption(Enum):
+    TWO_VALUES = auto()
+    TOTAL = auto()
 
 
 def get_mints_after_equalization(data: list, trait_type: str, trait_value_1: str, trait_value_2: str):
@@ -43,14 +49,17 @@ def get_mints_after_total_equalization(data: list, trait_type: str):
 metadata = read_json("data/ssj_metadata.json")
 all_ids = read_json("data/ssj_mint_ids.json")
 t_type = 'Background'
-t_value_1 = 'Purple'
-t_value_2 = 'Green'
+equality_option = EqualityOption.TWO_VALUES
 
-# # compare 2 trait values
-extra_mints = get_mints_after_equalization(metadata, t_type, t_value_1, t_value_2)
-
-# # compare all trait values
-# extra_mints = get_mints_after_total_equalization(metadata, t_type)
+extra_mints = []
+if equality_option == EqualityOption.TWO_VALUES:
+    t_value_1 = 'Purple'
+    t_value_2 = 'Teal'
+    # # compare 2 trait values
+    extra_mints = get_mints_after_equalization(metadata, t_type, t_value_1, t_value_2)
+elif equality_option == EqualityOption.TOTAL:
+    # # compare all trait values
+    extra_mints = get_mints_after_total_equalization(metadata, t_type)
 
 print(f"extra mints: {len(extra_mints)} ")
 kill_mint_ids(metadata, extra_mints, all_ids)
