@@ -44,7 +44,7 @@ Enter option to find holders addresses:
     print(f"found {len(dead_holders)} holders addresses {address_option.name} with number")
 
     ids_to_kill = get_mints_from_holders(dead_holders, mints_per_holder)
-    print(f"extra mints: {len(ids_to_kill)} ")
+    print(f"kill {len(ids_to_kill)} mints:{ids_to_kill}")
 
     kill_mint_ids(metadata, ids_to_kill, all_ids)
 

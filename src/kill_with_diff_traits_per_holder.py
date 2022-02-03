@@ -29,7 +29,7 @@ def main(metadata, holders_with_all_mints, all_ids):
     mint_att_dict = get_mint_att_dict(metadata, t_type)
 
     ids_to_kill = get_extra_mints_from_holders(holder_with_alive_mints, mints_per_holder, mint_att_dict)
-    print(f"kill:{ids_to_kill}")
+    print(f"kill {len(ids_to_kill)} mints:{ids_to_kill}")
 
     kill_mint_ids(metadata, ids_to_kill, all_ids)
 

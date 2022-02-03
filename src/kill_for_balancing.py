@@ -68,7 +68,7 @@ Enter a balance option:
         # # compare all trait values
         extra_mints = get_mints_after_total_balancing(metadata, t_type)
 
-    print(f"extra mints: {len(extra_mints)} ")
+    print(f"kill {len(extra_mints)} mints:{extra_mints}")
     kill_mint_ids(metadata, extra_mints, all_ids)
 
 # # Task 7, 14, 21, 28, 24

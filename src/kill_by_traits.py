@@ -11,7 +11,7 @@ def main(metadata, all_ids):
     print(f"found:{ids_with_att}")
 
     ids_to_kill = find_alive_mint_ids(ids_with_att)
-    print(f"kill:{ids_to_kill}")
+    print(f"kill {len(ids_to_kill)} mints:{ids_to_kill}")
 
     kill_mint_ids(metadata, ids_to_kill, all_ids)
 
