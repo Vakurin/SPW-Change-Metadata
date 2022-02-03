@@ -10,9 +10,8 @@ def metaboss_json(file):
         el['mint_account'] = without_json
         del el["link"]
         del el["name"]
-    print(data)
-    write_file(data, "update-metaboss")
-
+    print('writing to output/update_metaboss.json', data)
+    write_file(data, "output/update_metaboss")
 
 # # format to correct struct
-metaboss_json("arweave_output.json")
+# metaboss_json("arweave_output.json")

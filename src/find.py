@@ -21,7 +21,7 @@ def find_mint_ids_by_att(data: list, trait_type: str, trait_value: str):
             if (att['trait_type'] == trait_type) and (att['value'] == trait_value):
                 count += 1
                 mint_ids.append(mint)
-    print(f"Find {count} mints with trait {trait_type}:{trait_value}")
+    print(f"Find total {count} mints with trait {trait_type}:{trait_value}")
     return mint_ids
 
 

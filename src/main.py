@@ -1,36 +1,53 @@
-from kill_by_names import *
+import alive_mints_from_metadata
+import kill_by_names
+import kill_by_traits
+import kill_for_balancing
+import kill_by_holder_address
+import kill_with_diff_traits_per_holder
+from change_metaboss import metaboss_json
 from utility import read_json
-# metadata = read_json("data/spw_metadata.json")
-# names = read_json("data/names_to_kill.json")
-# ids = find_mint_ids_by_name(metadata, names)
-# kill_mint_ids(metadata, ids)
+
+metadata = read_json("ssj_metadata.json")
+all_ids = read_json("ssj_mint_ids.json")
+holders = read_json('ssj_holders.json')
+
+functions = {
+    1: lambda: kill_by_traits.main(metadata, all_ids),
+    2: lambda: kill_by_names.main(metadata, all_ids),
+    3: lambda: kill_for_balancing.main(metadata, all_ids),
+    4: lambda: kill_by_holder_address.main(metadata, holders, all_ids),
+    5: lambda: kill_with_diff_traits_per_holder.main(metadata, holders, all_ids),
+    6: lambda: metaboss_json("arweave_output.json"),
+    7: lambda: kill_for_balancing.get_mints_after_balancing(metadata, 'Type', 'Dog', 'Cat'),
+    8: lambda: print("не пон про что это"),
+    9: lambda: alive_mints_from_metadata.find_alive_mint_ids(metadata)
+}
+
+
+def switch_function(argument):
+    func = functions.get(argument, lambda: print("Invalid argument"))
+    return func()
 
 
 def main():
-    print("Starting SPW program: ")
     print("""
-    Choose what you want to do:
+Starting SPW program: 
+Choose what you want to do:
     1 - Kill by traits
     2 - Kill by names
-    3 - Stats how many cats and dogs alive
-    4 - Check unique holders
-    5 - 
+    3 - Kill for balance
+    4 - Kill if holder address contains number
+    5 - Kill if holder has mints with different trait values
     6 - Update Metaboss file
+    7 - Stats how many cats and dogs alive
+    8 - Check unique holders
+    9 - Update alive_mint_ids_by_metadata.json (NOT alive_mint_ids.json !)
     """)
-    metadata = read_json("spw_metadata.json")
-    print(metadata)
-    while True:
-        print("Enter number:")
-        program_num = int(input())
-        if program_num > 0:
-            break
-    
-    if program_num == 1:
-        print("")
-    elif program_num == 2:
-        pass
-    elif program_num == 6:
-        pass
+
+    print("Enter number:")
+    program_num = int(input())
+
+    switch_function(program_num)
 
 
 main()
