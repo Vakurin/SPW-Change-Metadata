@@ -2,7 +2,7 @@ from utility import read_json
 from utility import write_file
 
 
-def metaboss_json(file):
+def main(file):
     data = read_json(file)
     for el in data:
         el['new_uri'] = el["link"]
@@ -13,5 +13,6 @@ def metaboss_json(file):
     print('writing to output/update_metaboss.json', data)
     write_file(data, "output/update_metaboss")
 
+
 # # format to correct struct
-# metaboss_json("arweave_output.json")
+# main("arweave_output.json")

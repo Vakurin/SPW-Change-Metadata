@@ -4,7 +4,7 @@ import kill_by_traits
 import kill_for_balancing
 import kill_by_holder_address
 import kill_with_diff_traits_per_holder
-from change_metaboss import metaboss_json
+import change_metaboss 
 from utility import read_json
 
 metadata = read_json("ssj_metadata.json")
@@ -17,7 +17,7 @@ functions = {
     3: lambda: kill_for_balancing.main(metadata, all_ids),
     4: lambda: kill_by_holder_address.main(metadata, holders, all_ids),
     5: lambda: kill_with_diff_traits_per_holder.main(metadata, holders, all_ids),
-    6: lambda: metaboss_json("arweave_output.json"),
+    6: lambda: change_metaboss.main("arweave_output.json"),
     7: lambda: kill_for_balancing.get_mints_after_balancing(metadata, 'Type', 'Dog', 'Cat'),
     8: lambda: print("не пон про что это"),
     9: lambda: alive_mints_from_metadata.find_alive_mint_ids(metadata)
