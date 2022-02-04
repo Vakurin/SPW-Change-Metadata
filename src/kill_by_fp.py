@@ -49,7 +49,7 @@ def get_unlisted_mints_ids(listed_ids: list, all_ids: list):
             unlisted_ids.append(el)
     return unlisted_ids
 
-
+# # Task 2, 8, 15, 22, 25
 def main(metadata, collection_name: str, all_ids: list):
     listed_metadata = get_listed_mints_magiceden_metadata(collection_name)
     print(f'Found {len(listed_metadata)} listed items')
