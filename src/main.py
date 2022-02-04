@@ -1,4 +1,4 @@
-import alive_mints_from_metadata
+import is_alive_mints_from_metadata
 import kill_by_names
 import kill_by_traits
 import kill_for_balancing
@@ -23,7 +23,8 @@ functions = {
     7: lambda: change_metaboss.main("arweave_output.json"),
     8: lambda: kill_for_balancing.get_mints_after_balancing(metadata, 'Type', 'Dog', 'Cat'),
     9: lambda: print("не пон про что это"),
-    10: lambda: alive_mints_from_metadata.find_alive_mint_ids(metadata)
+    10: lambda: is_alive_mints_from_metadata.find_alive_mint_ids(metadata),
+    11: lambda: is_alive_mints_from_metadata.find_dead_mint_ids(metadata)
 }
 
 
@@ -45,7 +46,8 @@ Choose what you want to do:
     7 - Update Metaboss file
     8 - Stats how many cats and dogs alive
     9 - Check unique holders
-    10 - Update alive_mint_ids_by_metadata.json (NOT alive_mint_ids.json !)
+    10 - Update alive_mint_ids_by_metadata.json for checking (NOT alive_mint_ids.json !)
+    11 - Update dead_mint_ids_by_metadata.json for checking (NOT dead_mint_ids.json !)
     """)
 
     print("Enter number:")
