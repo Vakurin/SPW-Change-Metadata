@@ -2,6 +2,7 @@ from utility import read_json
 from utility import write_file
 
 
+# # format to correct struct
 def main(file):
     data = read_json(file)
     for el in data:
@@ -12,7 +13,3 @@ def main(file):
         del el["name"]
     print('writing to output/update_metaboss.json', data)
     write_file(data, "output/update_metaboss")
-
-
-# # format to correct struct
-# main("arweave_output.json")

@@ -1,5 +1,8 @@
+import json
+
 from utility import read_json
 from utility import write_file
+from urllib.request import Request, urlopen
 
 DEAD_IMG_URL = "https://arweave.net/RHLYg5wZwpCX3ZwwZYAJTriJo1ZkLB2ruGHbfy6GfJc"
 
@@ -68,3 +71,34 @@ def get_holders_with_alive_mints(mints_number: int, holders: dict):
             holders_mints[value] = alive_mints
     # write_file(holders_mints, 'test')
     return holders_mints
+
+
+def get_listed_mints_magiceden_metadata(collection: str):
+    mints = []
+    counter = 0
+    while True:
+        url = f'https://api-mainnet.magiceden.io/rpc/getListedNFTsByQuery?q={{"$match":' \
+              f'{{"collectionSymbol":"{collection}"}},"$skip":{counter}}}'
+        req = Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+        web_byte = urlopen(req).read()
+        results: list = json.loads(web_byte.decode('utf-8'))['results']
+        counter += 20
+        mints.extend(results)
+        if len(results) == 0:
+            break
+    return mints
+
+
+def get_mints_ids_from_magiceden_metadata(magiceden_metadata: list):
+    result = []
+    for el in magiceden_metadata:
+        result.append(el['mintAddress'])
+    return result
+
+
+def subtract_lists(to_subtract: list, from_subtract: list):
+    result = []
+    for el in from_subtract:
+        if el not in to_subtract:
+            result.append(el)
+    return result

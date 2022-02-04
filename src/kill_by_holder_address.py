@@ -27,6 +27,7 @@ def get_mints_from_holders(holders: dict, mints_number: int):
     return result_mints
 
 
+# # Task 19, 27
 def main(metadata, holders_with_all_mints, all_ids):
     print("Enter mints per holder (e.g: 1 - find holders with >=1 mints and kill 1 mint)")
     mints_per_holder = int(input())
@@ -47,21 +48,3 @@ Enter option to find holders addresses:
     print(f"kill {len(ids_to_kill)} mints:{ids_to_kill}")
 
     kill_mint_ids(metadata, ids_to_kill, all_ids)
-
-# # Task 19, 27
-# metadata = read_json("ssj_metadata.json")
-# holders_with_all_mints = read_json('ssj_holders.json')
-# all_ids = read_json("ssj_mint_ids.json")
-# mints_per_holder = 1
-# address_option = Option.ENDS
-#
-# holder_with_alive_mints = get_holders_with_alive_mints(mints_per_holder, holders_with_all_mints)
-# print(f"found {len(holder_with_alive_mints)} holders with >={mints_per_holder} alive mints")
-#
-# dead_holders = get_holders_with_number(holder_with_alive_mints, address_option)
-# print(f"found {len(dead_holders)} holders addresses {address_option.name} with number")
-#
-# ids_to_kill = get_mints_from_holders(dead_holders, mints_per_holder)
-# print(f"extra mints: {len(ids_to_kill)} ")
-#
-# kill_mint_ids(metadata, ids_to_kill, all_ids)

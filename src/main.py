@@ -3,8 +3,9 @@ import kill_by_names
 import kill_by_traits
 import kill_for_balancing
 import kill_by_holder_address
+import kill_listed_or_unlisted
 import kill_with_diff_traits_per_holder
-import kill_by_fp
+import kill_by_price
 import change_metaboss
 from utility import read_json
 
@@ -19,12 +20,13 @@ functions = {
     3: lambda: kill_for_balancing.main(metadata, all_ids),
     4: lambda: kill_by_holder_address.main(metadata, holders, all_ids),
     5: lambda: kill_with_diff_traits_per_holder.main(metadata, holders, all_ids),
-    6: lambda: kill_by_fp.main(metadata, collection_name, all_ids),
-    7: lambda: change_metaboss.main("arweave_output.json"),
-    8: lambda: kill_for_balancing.get_mints_after_balancing(metadata, 'Type', 'Dog', 'Cat'),
-    9: lambda: print("не пон про что это"),
-    10: lambda: is_alive_mints_from_metadata.find_alive_mint_ids(metadata),
-    11: lambda: is_alive_mints_from_metadata.find_dead_mint_ids(metadata)
+    6: lambda: kill_by_price.main(metadata, collection_name, all_ids),
+    7: lambda: kill_listed_or_unlisted.main(metadata, collection_name, all_ids),
+    8: lambda: change_metaboss.main("arweave_output.json"),
+    9: lambda: kill_for_balancing.get_mints_after_balancing(metadata, 'Type', 'Dog', 'Cat'),
+    10: lambda: print("не пон про что это"),
+    11: lambda: is_alive_mints_from_metadata.find_alive_mint_ids(metadata),
+    12: lambda: is_alive_mints_from_metadata.find_dead_mint_ids(metadata)
 }
 
 
@@ -43,11 +45,12 @@ Choose what you want to do:
     4 - Kill if holder address contains number
     5 - Kill if holder has mints with different trait values
     6 - Kill by floor price
-    7 - Update Metaboss file
-    8 - Stats how many cats and dogs alive
-    9 - Check unique holders
-    10 - Update alive_mint_ids_by_metadata.json for checking (NOT alive_mint_ids.json !)
-    11 - Update dead_mint_ids_by_metadata.json for checking (NOT dead_mint_ids.json !)
+    7 - Kill listed/unlisted mints
+    8 - Update Metaboss file
+    9 - Stats how many cats and dogs alive
+    10 - Check unique holders
+    11 - Update alive_mint_ids_by_metadata.json for checking (NOT alive_mint_ids.json !)
+    12 - Update dead_mint_ids_by_metadata.json for checking (NOT dead_mint_ids.json !)
     """)
 
     print("Enter number:")

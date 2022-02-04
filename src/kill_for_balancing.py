@@ -45,6 +45,7 @@ def get_mints_after_total_balancing(data: list, trait_type: str):
     return result_mints
 
 
+# # Task 7, 14, 21, 28, 24
 def main(metadata, all_ids):
     print("""
 Enter a balance option:
@@ -70,22 +71,3 @@ Enter a balance option:
 
     print(f"kill {len(extra_mints)} mints:{extra_mints}")
     kill_mint_ids(metadata, extra_mints, all_ids)
-
-# # Task 7, 14, 21, 28, 24
-# metadata = read_json("ssj_metadata.json")
-# all_ids = read_json("ssj_mint_ids.json")
-# t_type = 'Background'
-# equality_option = BalanceOption.TWO_VALUES
-#
-# extra_mints = []
-# if equality_option == BalanceOption.TWO_VALUES:
-#     t_value_1 = 'Purple'
-#     t_value_2 = 'Teal'
-#     # # compare 2 trait values
-#     extra_mints = get_mints_after_balancing(metadata, t_type, t_value_1, t_value_2)
-# elif equality_option == BalanceOption.TOTAL:
-#     # # compare all trait values
-#     extra_mints = get_mints_after_total_balancing(metadata, t_type)
-#
-# print(f"extra mints: {len(extra_mints)} ")
-# kill_mint_ids(metadata, extra_mints, all_ids)
