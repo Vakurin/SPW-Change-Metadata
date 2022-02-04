@@ -24,9 +24,8 @@ functions = {
     7: lambda: kill_listed_or_unlisted.main(metadata, collection_name, all_ids),
     8: lambda: change_metaboss.main("arweave_output.json"),
     9: lambda: kill_for_balancing.get_mints_after_balancing(metadata, 'Type', 'Dog', 'Cat'),
-    10: lambda: print("не пон про что это"),
-    11: lambda: is_alive_mints_from_metadata.find_alive_mint_ids(metadata),
-    12: lambda: is_alive_mints_from_metadata.find_dead_mint_ids(metadata)
+    10: lambda: is_alive_mints_from_metadata.find_alive_mint_ids(metadata),
+    11: lambda: is_alive_mints_from_metadata.find_dead_mint_ids(metadata)
 }
 
 
@@ -48,9 +47,8 @@ Choose what you want to do:
     7 - Kill listed/unlisted mints
     8 - Update Metaboss file
     9 - Stats how many cats and dogs alive
-    10 - Check unique holders
-    11 - Update alive_mint_ids_by_metadata.json for checking (NOT alive_mint_ids.json !)
-    12 - Update dead_mint_ids_by_metadata.json for checking (NOT dead_mint_ids.json !)
+    10 - Update alive_mint_ids_by_metadata.json for checking (NOT alive_mint_ids.json !)
+    11 - Update dead_mint_ids_by_metadata.json for checking (NOT dead_mint_ids.json !)
     """)
 
     print("Enter number:")
