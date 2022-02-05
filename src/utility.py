@@ -10,6 +10,11 @@ def read_json(filename):
     return json.load(f)
 
 
+def read_updated_json(filename):
+    f = open('../need_updating/' + filename)
+    return json.load(f)
+
+
 def write_file(data, name):
     with open(f'../{name}.json', 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=2)

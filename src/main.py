@@ -8,11 +8,11 @@ import kill_by_traits
 import kill_for_balancing
 import kill_listed_or_unlisted
 import kill_with_diff_traits_per_holder
-from utility import read_json
+from utility import read_json, read_updated_json
 
-metadata = read_json("spw_metadata.json")
+metadata = read_updated_json("spw_metadata.json")
 all_ids = read_json("spw_mint_ids.json")
-holders = read_json('spw_holders.json')
+holders = read_updated_json('spw_holders.json')
 collection_name = 'sol_pet_war'
 
 functions = {
@@ -23,7 +23,7 @@ functions = {
     5: lambda: kill_with_diff_traits_per_holder.main(metadata, holders, all_ids),
     6: lambda: kill_by_price.main(metadata, collection_name, all_ids),
     7: lambda: kill_listed_or_unlisted.main(metadata, collection_name, all_ids),
-    8: lambda: change_metaboss.main("arweave_output.json"),
+    8: lambda: change_metaboss.main(),
     9: lambda: kill_for_balancing.get_mints_after_balancing(metadata, 'Type', 'Dog', 'Cat'),
     10: lambda: holders_stats.main(holders),
     11: lambda: is_alive_mints_from_metadata.main(metadata),

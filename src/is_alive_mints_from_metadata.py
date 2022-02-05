@@ -22,15 +22,5 @@ def find_dead_mint_ids(data):
 
 # # get correct information from metadata
 def main(metadata):
-    print("""
-Enter a option:
-    1 - Get info about ALIVE mints from metadata 
-    2 - Get info about DEAD mints from metadata
-    """)
-
-    option = Option.ALIVE if int(input()) == 1 else Option.DEAD
-
-    if option == Option.ALIVE:
-        find_alive_mint_ids(metadata)
-    elif option == Option.DEAD:
-        find_dead_mint_ids(metadata)
+    find_alive_mint_ids(metadata)
+    find_dead_mint_ids(metadata)
