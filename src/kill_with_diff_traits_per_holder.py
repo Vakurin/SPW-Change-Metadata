@@ -1,6 +1,6 @@
 import random
 
-from find import kill_mint_ids, get_mint_att_dict, get_holders_with_alive_mints
+from find import kill_mint_ids, get_mint_att_dict, get_holders_with_alive_mints, find_alive_mint_ids
 
 
 # get mints if holder has mints with different trait values
@@ -9,7 +9,7 @@ def get_extra_mints_from_holders(holders: dict, mints_number: int, mint_att: dic
     for holder, mints in holders.items():
         temp = mint_att.get(mints[0])
         for mint in mints:
-            if mint_att.get(mint) != temp:
+            if mint_att.get(mint) != temp and find_alive_mint_ids([mint]):
                 result_mints.extend(random.sample(mints, mints_number))
                 break
     return result_mints

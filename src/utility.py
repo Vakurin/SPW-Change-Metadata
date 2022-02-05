@@ -1,5 +1,9 @@
 import json
+import os
+import datetime
 
+
+# os.mkdir('../change_meta/')
 
 def read_json(filename):
     f = open('../data/' + filename)

@@ -10,10 +10,10 @@ import kill_listed_or_unlisted
 import kill_with_diff_traits_per_holder
 from utility import read_json
 
-metadata = read_json("ssj_metadata.json")
-all_ids = read_json("ssj_mint_ids.json")
-holders = read_json('ssj_holders.json')
-collection_name = 'solana_samurai_journey'
+metadata = read_json("spw_metadata.json")
+all_ids = read_json("spw_mint_ids.json")
+holders = read_json('spw_holders.json')
+collection_name = 'sol_pet_war'
 
 functions = {
     1: lambda: kill_by_traits.main(metadata, all_ids),

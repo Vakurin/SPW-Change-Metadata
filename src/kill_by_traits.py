@@ -5,7 +5,7 @@ from find import find_mint_ids_by_att, kill_mint_ids, find_alive_mint_ids
 def main(metadata, all_ids):
     print('Enter trait type')
     t_type = input()
-    print('Enter trait type')
+    print('Enter trait value')
     t_value = input()
 
     ids_with_att = find_mint_ids_by_att(metadata, t_type, t_value)
