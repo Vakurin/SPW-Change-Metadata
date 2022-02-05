@@ -39,6 +39,15 @@ Enter a balance option:
     filtered_ids = get_mints_ids_from_magiceden_metadata(filter_magiceden_metadata(listed_metadata, mint_price, option))
     print(f'Found {len(filtered_ids)} listed items with FP {option.name} than {mint_price}: {filtered_ids}')
 
-    ids_to_kill = find_alive_mint_ids(unlisted_ids + filtered_ids)
-    print(f"kill unlisted and filtered ({len(ids_to_kill)}) mints:{ids_to_kill}")
+    print("""
+Kill unlisted???:
+    1 - KILL unlisted
+    2 - Please DONT KILL unlisted
+    """)
+    if int(input()) == 1:
+        ids_to_kill = find_alive_mint_ids(unlisted_ids + filtered_ids)
+        print(f"kill unlisted and filtered ({len(ids_to_kill)}) mints:{ids_to_kill}")
+    else:
+        ids_to_kill = find_alive_mint_ids(filtered_ids)
+        print(f"kill filtered ({len(ids_to_kill)}) mints:{ids_to_kill}")
     kill_mint_ids(metadata, ids_to_kill, all_ids)
