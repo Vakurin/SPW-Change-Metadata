@@ -16,8 +16,8 @@ def main(metadata, collection_name: str, all_ids: list):
     unlisted_ids = subtract_lists(listed_ids, all_ids)
     print(f'Found {len(unlisted_ids)} NOT listed items')
 
-    print(f"""
-Enter a balance option:
+    print("""
+Enter option:
     1 - Kill listed mints
     2 - Kill unlisted mints
     """)

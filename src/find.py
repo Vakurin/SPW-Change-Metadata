@@ -1,8 +1,7 @@
 import json
-
+from urllib.request import Request, urlopen
 from utility import read_json
 from utility import write_file
-from urllib.request import Request, urlopen
 
 DEAD_IMG_URL = "https://arweave.net/RHLYg5wZwpCX3ZwwZYAJTriJo1ZkLB2ruGHbfy6GfJc"
 
@@ -46,10 +45,7 @@ def kill_mint_ids(data: list, mint_ids_to_kill: list, all_ids: list):
 
 def subtract_deads_from_alive(all_ids: list):
     dead_ids: list = read_json("dead_mint_ids.json")
-    alive_ids = []
-    for el in all_ids:
-        if el not in dead_ids:
-            alive_ids.append(el)
+    alive_ids = subtract_lists(dead_ids, all_ids)
     write_file(alive_ids, 'data/alive_mint_ids')
 
 
@@ -97,8 +93,4 @@ def get_mints_ids_from_magiceden_metadata(magiceden_metadata: list):
 
 
 def subtract_lists(to_subtract: list, from_subtract: list):
-    result = []
-    for el in from_subtract:
-        if el not in to_subtract:
-            result.append(el)
-    return result
+    return list(set(from_subtract) - set(to_subtract))
