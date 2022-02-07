@@ -8,6 +8,7 @@ import kill_by_traits
 import kill_for_balancing
 import kill_listed_or_unlisted
 import kill_with_diff_traits_per_holder
+import revive_mints
 from utility import read_json, read_updated_json
 
 metadata = read_updated_json("spw_metadata.json")
@@ -27,6 +28,7 @@ functions = {
     9: lambda: kill_for_balancing.get_mints_after_balancing(metadata, 'Type', 'Dog', 'Cat'),
     10: lambda: holders_stats.main(holders),
     11: lambda: is_alive_mints_from_metadata.main(metadata),
+    12: lambda: revive_mints.main(all_ids)
 }
 
 
@@ -50,6 +52,7 @@ Choose what you want to do:
     9 - Stats how many cats and dogs alive
     10 - Stats for holders
     11 - Update (alive/dead) _mint_ids_by_metadata.json for checking
+    12 - Choose random mints to kill from change_meta/FOLDER (and revive others)
     """)
 
     print("Enter number:")
