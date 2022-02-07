@@ -1,7 +1,9 @@
 import json
+from datetime import datetime
 from urllib.request import Request, urlopen
 from utility import read_json
 from utility import write_file
+from pathlib import Path
 
 DEAD_IMG_URL = "https://arweave.net/RHLYg5wZwpCX3ZwwZYAJTriJo1ZkLB2ruGHbfy6GfJc"
 
@@ -28,6 +30,8 @@ def find_mint_ids_by_att(data: list, trait_type: str, trait_value: str):
 
 
 def kill_mint_ids(data: list, mint_ids_to_kill: list, all_ids: list):
+    folder = datetime.now().strftime("%d_%b(%H:%M)")
+    Path("../change_meta/" + folder).mkdir(parents=True, exist_ok=True)
     dead_ids = read_json("dead_mint_ids.json")
     for el in data:
         mint = el['mint']
@@ -36,7 +40,7 @@ def kill_mint_ids(data: list, mint_ids_to_kill: list, all_ids: list):
                 if att["trait_type"] == "isAlive":
                     att['value'] = "False"
                 el['metadata']['image'] = DEAD_IMG_URL
-                write_file(data=el['metadata'], name='change_meta/' + mint)
+                write_file(data=el['metadata'], name='change_meta/' + folder + '/' + mint)
                 if mint not in dead_ids:
                     dead_ids.append(mint)
     write_file(dead_ids, 'data/dead_mint_ids')
