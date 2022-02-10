@@ -55,7 +55,7 @@ Choose what you want to do:
     12 - Choose random mints to kill from change_meta/FOLDER (and revive others)
     """)
 
-    print("Enter number:")
+    print("Enter number of function:")
     program_num = int(input())
 
     switch_function(program_num)
