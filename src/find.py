@@ -10,7 +10,8 @@ DEAD_IMG_URL = "https://arweave.net/RHLYg5wZwpCX3ZwwZYAJTriJo1ZkLB2ruGHbfy6GfJc"
 
 def find_alive_mint_ids(mint_ids: list):
     alive_ids: list = read_json('alive_mint_ids.json')
-    return list(filter(lambda mint: mint in alive_ids, mint_ids))
+    immunity: list = read_json("immunity.json")
+    return list(filter(lambda mint: mint in alive_ids and mint not in immunity, mint_ids))
     # return mint_ids
 
 
