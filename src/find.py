@@ -1,7 +1,7 @@
 import json
 from datetime import datetime
 from urllib.request import Request, urlopen
-from utility import read_json
+from utility import read_json, read_updated_json
 from utility import write_file
 from pathlib import Path
 
@@ -10,7 +10,7 @@ DEAD_IMG_URL = "https://arweave.net/RHLYg5wZwpCX3ZwwZYAJTriJo1ZkLB2ruGHbfy6GfJc"
 
 def find_alive_mint_ids(mint_ids: list):
     alive_ids: list = read_json('alive_mint_ids.json')
-    immunity: list = read_json("immunity.json")
+    immunity: list = read_updated_json("immunity.json")
     return list(filter(lambda mint: mint in alive_ids and mint not in immunity, mint_ids))
     # return mint_ids
 

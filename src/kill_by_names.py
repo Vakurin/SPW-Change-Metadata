@@ -1,5 +1,5 @@
-from utility import read_json
 from find import kill_mint_ids, find_alive_mint_ids
+from utility import read_updated_json
 
 
 def find_mint_ids_by_name(data, names_to_kill):
@@ -17,7 +17,7 @@ def find_mint_ids_by_name(data, names_to_kill):
 
 # # Task 13
 def main(metadata, all_ids):
-    names = read_json("names_to_kill.json")
+    names = read_updated_json("names_to_kill.json")
 
     ids_with_names = find_mint_ids_by_name(metadata, names)
     print(f"found:{ids_with_names}")
