@@ -1,11 +1,10 @@
 import json
 from datetime import datetime
 from urllib.request import Request, urlopen
-from utility import read_json, read_updated_json
-from utility import write_file
+from utility import read_json, read_updated_json, write_file, get_img_url
 from pathlib import Path
 
-DEAD_IMG_URL = "https://arweave.net/RHLYg5wZwpCX3ZwwZYAJTriJo1ZkLB2ruGHbfy6GfJc"
+DEAD_IMG_URL = get_img_url('0')
 
 
 def find_alive_mint_ids(mint_ids: list):

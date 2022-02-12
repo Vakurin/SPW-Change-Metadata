@@ -1,3 +1,5 @@
+import sys
+
 import change_metaboss
 import holders_stats
 import is_alive_mints_from_metadata
@@ -38,6 +40,11 @@ def switch_function(argument):
 
 
 def main():
+    print('Did u updated: DAY, spw_holders, spw_metadata, [immunity; names_to_kill]   (Y/N)')
+    if input() != 'Y':
+        print('Please update')
+        sys.exit()
+
     print("""
 Starting SPW program: 
 Choose what you want to do:

@@ -1,6 +1,4 @@
 import json
-import os
-import datetime
 
 
 # os.mkdir('../change_meta/')
@@ -18,3 +16,12 @@ def read_updated_json(filename):
 def write_file(data, name):
     with open(f'../{name}.json', 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
+
+
+def get_img_url(day: str):
+    img_urls: list = read_json('from16.json')
+    for url in img_urls:
+        name: str = url['name']
+        if name.split('.')[0] == day:
+            return url['link']
+    raise SystemExit('Not found img with this name')
