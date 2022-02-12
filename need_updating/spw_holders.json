@@ -1,31 +1,35 @@
 {
-  "SekMaWyvUxPV1SLVYiVJPmf1jxcv8tZLfw18zSyYKsS": {
-    "amount": 10,
+  "633psGo7a98EEf5W7uRms1SoZKsEDbkfkQmpywgc66dB": {
+    "amount": 2,
     "mints": [
-      "5d8qL6ReT1N7Vq8xFhx8XwVpE5U4KXcqGHs3iHMh8r28",
-      "CBSQ3isjqjwRFLduFeHwdvGKDgJtTtAanw4m47NUK34c",
-      "HrEEMmeqCU6Zg4F3ZqTQ3bvtTvVyzhzcZb8EWPWZXThU",
-      "AXzzYTLK8ukCLnDWMboUnQ6uUP7rSPjsUmR819PhxPGy",
-      "HuXkA6yFtTiJpKU7zXB2hENBPydPmGcrvVeJxP9XLxJN",
-      "EBip2V6LAsKNW7UFGTdCGPYDWCzaqh1zTfve5bHZpMhF",
-      "57mQkTDk3E7q25fNHYyJGw28H7uQXAaSi1cGRVVBZ5Qp",
-      "Dr8poxfJsTqpr9oZBEfwpTza2qLpygatfEeWFpsEEQwC",
-      "4vHPVamN4mZboqHSpWo28WEHAYTAtrNYy7G8YRwPWJrB",
-      "EgSGTRCpqkyEb6fRxva7K34jR1jX6oc8RYxLTkNiN5Fn"
+      "4272gJ9XqyKD8KoeXP2djqYbgjZjdA6uPTu7XMjT9193",
+      "ABvN43P6w8rWVH7un89HMbNAfagn3ChrTa9q1vnEy7Xx"
+    ]
+  },
+  "5QPNzPFdoNgXgq8uPWuqAktKcmzQDk1qry9RY2gbx62Q": {
+    "amount": 1,
+    "mints": [
+      "78mtgnrwTMxazrXney9rGKpRKfk91EZs6MW6zxhA5wNQ"
     ]
   },
   "4t6gGUUfDzSosUcwUJZ1MnTPu2ciw2D4k7x2k976XpS3": {
-    "amount": 1,
+    "amount": 2,
     "mints": [
-      "aRt32T3fgCSAec35dwKP5HgYnsNnFiPZqeBRRGSmTBi"
+      "ByuNf5xmRoAKhQTMkz92pVQaRU4TdkbeRc3po4C8VgTD",
+      "3sNutRxuSnGt2YknUMbSaeT1wN4XNeaVUyqjB7x4TsgG"
     ]
   },
-  "633psGo7a98EEf5W7uRms1SoZKsEDbkfkQmpywgc66dB": {
-    "amount": 3,
+  "C8dhGoqEYjZXdKGxAuipdJpK5V8YHixmmeKPRKzEz63h": {
+    "amount": 1,
     "mints": [
-      "HnwDrpSjNuKBc7LxD4bFEUHDZztS9iRTc9mhCtUnuYTN",
-      "9995K46SG2SmytExq5haoi2axqgJGsDXusGGB6XM3ytg",
-      "soZBjK7p2PUU8RH9eXSiqt5KDCXwi3MqUKFxeFLJyEw"
+      "FEckba9iLzYTeWm8kUEnWAzy3rMGsv5mpAjEkDVaCpMJ"
+    ]
+  },
+  "SekMaWyvUxPV1SLVYiVJPmf1jxcv8tZLfw18zSyYKsS": {
+    "amount": 2,
+    "mints": [
+      "7FozCjA76ZVznDCKLM4MwSnKajHGcGdLDFf2swBMHuo8",
+      "Bd2LF2iFtV6uutUr3vbCyA1xsBYuY2Q8RD5eT8aqvysp"
     ]
   }
 }
