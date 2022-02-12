@@ -4,6 +4,8 @@ from urllib.request import Request, urlopen
 from utility import read_json, read_updated_json, write_file, get_img_url
 from pathlib import Path
 
+# update every day
+# 6, 13, 20, 27 add -dogs if necessary
 DEAD_IMG_URL = get_img_url('0')
 
 
