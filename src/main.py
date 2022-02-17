@@ -16,7 +16,7 @@ from utility import read_json, read_updated_json
 metadata = read_updated_json("spw_metadata.json")
 all_ids = read_json("spw_mint_ids.json")
 holders = read_updated_json('spw_holders.json')
-collection_name = 'sol_pet_war'
+collection_name = 'solpetwar'
 
 functions = {
     1: lambda: kill_by_traits.main(metadata, all_ids),
