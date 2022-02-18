@@ -19,7 +19,7 @@ def write_file(data, name):
 
 
 def get_img_url(day: str):
-    img_urls: list = read_json('from16.json')
+    img_urls: list = read_json('from17.json')
     for url in img_urls:
         name: str = url['name']
         if name.split('.')[0] == day:
