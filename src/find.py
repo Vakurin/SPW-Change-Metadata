@@ -6,7 +6,7 @@ from pathlib import Path
 
 # update every day
 # 6, 13, 20, 27 add -dogs if necessary
-DEAD_IMG_URL = get_img_url('0')
+DEAD_IMG_URL = get_img_url('1')
 
 
 def find_alive_mint_ids(mint_ids: list):
