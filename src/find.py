@@ -6,12 +6,13 @@ from pathlib import Path
 
 # update every day
 # 6, 13, 20, 27 add -dogs if necessary
-DEAD_IMG_URL = get_img_url('5')
+DEAD_IMG_URL = get_img_url('6')
 
 
 def find_alive_mint_ids(mint_ids: list):
     alive_ids: list = read_json('alive_mint_ids.json')
-    return list(filter(lambda mint: mint in alive_ids, mint_ids))
+    immunity: list = read_updated_json("immunity.json")
+    return list(filter(lambda mint: mint in alive_ids and mint not in immunity, mint_ids))
     # return mint_ids
 
 
@@ -34,11 +35,10 @@ def kill_mint_ids(data: list, mint_ids_to_kill: list, all_ids: list):
     folder = datetime.now().strftime("%d_%b(%H:%M)")
     Path("../change_meta/" + folder).mkdir(parents=True, exist_ok=True)
     dead_ids = read_json("dead_mint_ids.json")
-    immunity: list = read_updated_json("immunity.json")
 
     for el in data:
         mint = el['mint']
-        if mint in mint_ids_to_kill and mint not in immunity:
+        if mint in mint_ids_to_kill:
             for att in el['metadata']['attributes']:
                 if att["trait_type"] == "isAlive":
                     att['value'] = "False"
