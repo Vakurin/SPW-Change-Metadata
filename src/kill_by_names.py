@@ -7,13 +7,13 @@ def find_mint_ids_by_name(data, names_to_kill):
     mint_ids = []
     for el in data:
         mint = el['mint']
-        # name = el['metadata']['name']
-        # if int(name.split('#', 1)[1]) in names_to_kill:
-        #     count += 1
-        #     mint_ids.append(mint)
-        if mint in names_to_kill:
+        name = el['metadata']['name']
+        if int(name.split('#', 1)[1]) in names_to_kill:
             count += 1
             mint_ids.append(mint)
+        # if mint in names_to_kill:
+        #     count += 1
+        #     mint_ids.append(mint)
     print(f"Find {count} Names")
     return mint_ids
 
