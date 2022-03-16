@@ -6,7 +6,7 @@ from pathlib import Path
 
 # update every day
 # 6, 13, 20, 27 add -dogs if necessary
-DEAD_IMG_URL = get_img_url('23')
+DEAD_IMG_URL = get_img_url('24')
 
 
 def find_alive_mint_ids(mint_ids: list):
@@ -94,8 +94,14 @@ def get_listed_mints_magiceden_metadata(collection: str):
 
 def get_mints_ids_from_magiceden_metadata(magiceden_metadata: list):
     result = []
+    alive_ids: list = read_json('alive_mint_ids.json')
+    prices = dict()
     for el in magiceden_metadata:
-        result.append(el['mintAddress'])
+        mintAddress = el['mintAddress']
+        result.append(mintAddress)
+        if mintAddress in alive_ids:
+            prices[mintAddress] = el['price']
+    write_file(prices, "test")
     return result
 
 
